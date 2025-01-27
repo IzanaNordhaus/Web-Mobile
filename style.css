@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+
+  
+  body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.6;
+    color: rgb(255, 100, 162);
+    background-color: #ffe5ee;
+  }
+  
+  header {
+    color:rgb(255, 100, 162);
+    padding: 20px 10px;
+    text-align: center;
+  }
+  
+  .desktop-message {
+    display: block; 
+  }
+  
+  .mobile-message {
+    display: none; 
+  }
+  .tablet-message {
+    display: none; 
+
+  }
+
+  
+  nav {
+
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1rem;
+    padding: 10px 0;
+  }
+  
+  nav a {
+    color: rgb(255, 100, 162);
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: bold;
+    padding: 8px 16px;
+    transition: border 0.3s ease;
+  }
+  
+  nav a:hover {
+    border: 1px solid rgb(255, 100, 162);
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .text-content {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background: #fffbfd;
+    border: 1px solid   #ff0077;;
+  }
+  
+  .text-content h2 {
+    margin-bottom: 15px;
+  }
+  
+  .text-content p {
+    margin-bottom: 10px;
+  }
+  
+  .image-content {
+    flex: 1;
+    margin: 10px;
+  }
+  
+  .image-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  
+  .image-grid img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 4px 6px rgb(255, 100, 162);
+  }
+  
+@media (max-width: 1024px){
+  body{
+    background-color: rgb(217, 255, 255);
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  .container{
+    flex-direction: column;
+  }
+
+
+  .desktop-message{
+    display: none;
+  }
+
+  .mobile-message{
+    display: none;
+  }
+
+  .tablet-message{
+    display: block;
+  }
+
+  .text-content,
+  .image-content{
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 768px){
+  body{
+    background-color: rgb(245, 228, 255);
+    font-family:'Courier New', Courier, monospace;
+}
+
+  nav{
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    margin-left: 20px;
+  }
+
+  .image-grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .desktop-message{
+    display: none;
+  }
+  .tablet-message{
+    display: none;
+  }
+
+  .mobile-message{
+    display: block;
+  }
+}
